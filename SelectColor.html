@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<button onclick="showRed()">Red</button>
+<button onclick="showBlue()">Blue</button>
+
+<div id="myRedDIV" style="display:table-cell;width:50px; background-color:red; height:100px; text-align:center;vertical-align:middle">
+Red
+</div>
+
+<div id="myBlueDIV" style="display:table-cell;border:3px;width:50px; background-color:blue; height:100px; text-align:center; vertical-align:middle">
+Blue
+</div>
+
+<script>
+function showRed() {
+  var x = document.getElementById("myRedDIV");
+  var y = document.getElementById("myBlueDIV");
+  x.style.display = "table-cell";
+  x.style.backgroundColor = "red";
+  x.style.textAlign = "center";
+  y.style.display = "none";  
+}
+
+function showBlue() {
+  var y = document.getElementById("myRedDIV");
+  var x = document.getElementById("myBlueDIV");
+  x.style.display = "table-cell";
+  x.style.backgroundColor = "blue";
+  x.style.textAlign = "center";
+  y.style.display = "none";  
+}
+</script>
+
+</body>
+</html>
